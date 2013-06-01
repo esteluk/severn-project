@@ -6,6 +6,11 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+/* 
+    Some default values
+*/
+$margin: 1.2em;
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -302,8 +307,45 @@ textarea {
 /*
     Nathan's styles
 */
+
+html {
+    background: url('../img/bg.png');
+}
+
+body {
+    
+}
+
 header {
     width: 100%;
     background-color: #333;
     border-bottom: 5px solid #111;
+    height: 65px;
+    overflow: auto;
+    position: fixed;
+
+    ul#menu {
+        color: #fff;
+        float: right;
+        margin: $margin 2*$margin 0 0;
+        li {
+            display: inline-block;
+            padding: 0 $margin;
+        }
+    }
+}
+
+h1 {
+    font-family: 'Museo', serif;
+}
+
+section {
+    overflow: auto;
+    padding: $margin 2*$margin;
+}
+
+#product {
+    background-color: #149ACC;
+    padding: 70px 2*$margin $margin;
+    min-height: 600px;
 }
