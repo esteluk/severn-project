@@ -341,6 +341,7 @@ header {
         width: 450px;
         img {
             float: left;
+            margin-right: 10px;
         }
         h1 {
             color: #81263f;
@@ -376,7 +377,7 @@ header {
         clear: right;
         float: right;
         font-size: 24px;
-        margin: $margin 2*$margin;
+        margin: $margin/2 2*$margin;
         @include museo;
     }
 }
