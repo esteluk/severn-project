@@ -54,32 +54,16 @@
                 next five years. These funds will help us build a Farm Shop and related facilities at our Whitchurch
                 location.</p>
 
-            <form action="." method="post">
-                <script src="https://checkout.stripe.com/v2/checkout.js"></script>
-                <button id="stripeButton">Donate £20</button>
-
-                <script>
-                    $('#stripeButton').click(function(){
-                        event.preventDefault();
-                      var token = function(res){
-                        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
-                        $('form').append($input).submit();
-                      };
-
-                      StripeCheckout.open({
-                        key:         'pk_test_SZesRHOJtwkRRMdZnwSEd2KJ',
-                        address:     true,
-                        amount:      2000,
-                        currency:    'gbp',
-                        name:        'Joes Pistachios',
-                        description: 'A bag of Pistachios',
-                        panelLabel:  'Checkout',
-                        token:       token
-                      });
-
-                      return false;
-                    });
-                </script>
+            <form action="" method="POST">
+              <script
+                src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+                data-key="pk_test_SZesRHOJtwkRRMdZnwSEd2KJ"
+                data-amount="2000"
+                data-currency="gbp"
+                data-name="Severn Project"
+                data-description="Suggested donation"
+                data-image="/128x128.png">
+              </script>
             </form>
         </div>
 
