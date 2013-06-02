@@ -15,6 +15,7 @@ $actioncolour: #8b4b86;
 $primarycolour: #86a35e;
 $secondarycolour: #605549;
 $strongcolour: #5b7a30;
+$footer: #8f2541;
 
 @mixin museo {
     font-family: 'Museo', sans-serif;
@@ -330,7 +331,7 @@ body {
 header {
     width: 100%;
     height: 136px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     overflow: auto;
     position: fixed;
     z-index: 10;
@@ -568,14 +569,24 @@ section {
     }
 }
 
+#contact {
+    background-color: #fff;
+    margin: 10px 40px;
+    h1 {
+        font-size: 24px;
+    }
+    .social {
+        display: inline;
+    }
+}
+
 footer {
-    background-color: $strongcolour;
+    background-color: $footer;
     overflow: auto;
-    section {
-        box-sizing: border-box;
-        width: 50%;
-        float: left;
-        color: #fff;
+    div {
+        background-image: url('../img/ugly.jpg');
+        background-size: cover;
+        min-height: 400px;
     }
 
     .social {
@@ -584,12 +595,22 @@ footer {
         }
     }
 
+    h1 {
+        color: #fff;
+        font-size: 24px;
+        margin: 20px 2*$margin;
+        img {
+            margin: -5px 10px 0 0;
+        }
+    }
+
     h2 {
         font-size: 24px;
     }
 
     .twitter-timeline {
-        // height: 300px;
+        float: right;
+        margin-top: -20px;
     }
 }
 
