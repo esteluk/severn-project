@@ -17,6 +17,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link href="css/lightbox.css" rel="stylesheet" />
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -26,7 +28,12 @@
 
         <!-- Add your site or application content here -->
         <header>
-            <img src id="logo">
+            <hgroup>
+                <img src id="logo">
+                <h1>The Severn Project</h1>
+                <h2>Sowing the seeds of hope</h2>
+            </hgroup>
+            
             <ul id="menu">
                 <li>Home</li>
                 <li>Our Product</li>
@@ -44,15 +51,60 @@
         </section>
 
         <section id="product">
-            <!-- <img src="img/salad.jpg" class="section-bg"> -->
             <h1>The freshest, most local salad in Bristol</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis molestie metus, sit amet semper enim dictum non. Donec justo magna, viverra eu placerat eu, condimentum eget mi. Phasellus convallis ullamcorper nisl id interdum. Curabitur rhoncus ornare augue, vitae posuere justo facilisis quis. Praesent lobortis commodo tellus, eget posuere eros condimentum ut. Fusce congue ligula ac nibh malesuada rhoncus.
+            <div id="intro">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis molestie metus, sit amet semper enim dictum non. Donec justo magna, viverra eu placerat eu, condimentum eget mi. Phasellus convallis ullamcorper nisl id interdum. Curabitur rhoncus ornare augue, vitae posuere justo facilisis quis. Praesent lobortis commodo tellus, eget posuere eros condimentum ut. Fusce congue ligula ac nibh malesuada rhoncus.
 
 
-            Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. Aenean metus leo, convallis a consequat ut, imperdiet eget erat.</p>
+                Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. Aenean metus leo, convallis a consequat ut, imperdiet eget erat.</p>
 
-            <button type="button">Our product story</button>
+                <button type="button">Our product story</button>
+            </div>
+
+            <div id="gallery">
+                <a href="img/salad.jpg" rel="lightbox" title="Salad!">
+                    <img src="img/gallery-1.jpg">
+                </a>
+
+                <a href="img/salad.jpg" rel="lightbox" title="Another salad">
+                    <img src="img/gallery-2.jpg">
+                </a>
+
+                <a href="img/salad.jpg" rel="lightbox" title="A third salad!">
+                    <img src="img/gallery-3.jpg">
+                </a>
+
+                <a href="img/salad.jpg" rel="lightbox" title="A fourth salad">
+                    <img src="img/gallery-4.jpg">
+                </a>
+            </div>
+
+            <div id="clients">
+                <ul>
+                    <li>
+                        <a href="http://www.rivercottage.net/canteens/bristol/">
+                            <img src="img/clients/rivercottage.JPG">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.theponyandtrap.co.uk/">
+                            <img src="img/clients/ponytrap.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.arnolfini.org.uk/">
+                            <img src="img/clients/arnolfini.jpg">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.lidobristol.com/">
+                            <img src="img/clients/lido.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
         <section>
@@ -75,6 +127,7 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/lightbox.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 

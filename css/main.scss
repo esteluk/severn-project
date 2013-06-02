@@ -328,6 +328,20 @@ header {
     position: fixed;
     z-index: 10;
 
+    hgroup {
+        float: left;
+        img {
+            float: left;
+        }
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+        h2 {
+            margin: 0;
+        }
+    }
+
     ul#menu {
         color: #222;
         float: right;
@@ -401,8 +415,34 @@ section {
 }
 
 #product {
-    background-color: #149ACC;
+    background-color: #fff;
     min-height: 600px;
+
+    &>div {
+        width: 30%;
+        float: left;
+        margin: 0 1%;
+    }
+
+    #intro {
+    }
+    #gallery {
+        text-align: center;
+        img {
+            margin: 3px 1px;
+        }
+    }
+    #clients {
+        ul {
+            list-style-type: none;
+            li {
+                margin: 20px 0;
+            }
+        }
+        img {
+            width: 220px;
+        }
+    }
 }
 
 button {
