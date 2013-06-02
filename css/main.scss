@@ -337,7 +337,7 @@ header {
 
     hgroup {
         float: left;
-        margin: $margin/2 2*$margin;
+        margin: 10px 30px;
         width: 450px;
         img {
             float: left;
@@ -618,6 +618,7 @@ aside {
 }
 
 #intro {
+    padding-bottom: 0;
     p {
         font-size: 20px;
         @include museo;
