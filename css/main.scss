@@ -11,6 +11,9 @@
 */
 $margin: 1.2em;
 
+$actioncolour: #835c67;
+$primarycolour: #86a35e;
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -378,15 +381,42 @@ section {
     padding-left: 0; padding-right: 0;
 
     h1 {
-        background-color: #86a35e;
+        background-color: $primarycolour;
         box-sizing: border-box;
         margin-top: 0;
         padding: 20px 3*$margin;
         width: 100%;
+    }
+
+    #video-play {
+        display: block;
+        height: 115px; width: 115px;
+        margin: 160px auto 0;
+
+        background-image: url('../img/play.png');
+        &:hover {
+            background-image: url('../img/play-hover.png');
+        }
     }
 }
 
 #product {
     background-color: #149ACC;
     min-height: 600px;
+}
+
+button {
+    background-color: $actioncolour;
+    background-image: url('../img/action-arrow.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: none;
+    border-right: 20px solid $actioncolour;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'museo', sans-serif;
+    font-weight: 300;
+    padding: 10px 20px;;
+    text-align: left;
+    width: 245px;
 }
