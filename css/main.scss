@@ -335,6 +335,7 @@ header {
     overflow: auto;
     position: fixed;
     z-index: 10;
+    overflow: visible;
 
     hgroup {
         float: left;
@@ -367,7 +368,7 @@ header {
 
     ul#menu {
         color: #222;
-        float: right;
+        text-align: right;
         margin: 25px 2*$margin 0 0;
         li {
             display: inline-block;
