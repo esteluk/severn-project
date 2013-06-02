@@ -9,9 +9,9 @@
 /* 
     Some default values
 */
-$margin: 1.2em;
+$margin: 40px;
 
-$actioncolour: #835c67;
+$actioncolour: #8b4b86;
 $primarycolour: #86a35e;
 
 @mixin museo {
@@ -367,9 +367,13 @@ header {
 }
 
 h1 {
-    font-family: 'Museo', serif;
+    @include museo;
     font-size: 40px;
-    font-weight: 300;
+}
+
+h2 {
+    @include museo;
+    font-size: 20px;
 }
 
 section {
@@ -471,6 +475,34 @@ section {
     }
 }
 
+#social {
+    background-image: url('../img/working.jpg');
+    background-size: cover;
+    padding-left: 0;
+    h1 {
+        margin-left: 2*$margin;
+    }
+    &>div {
+        width: 680px;
+        background-color: #fff;
+        overflow: auto;
+        padding-left: 2*$margin;
+        box-sizing: border-box;
+        div {
+            width: 50%;
+            box-sizing: border-box;
+            float: left;
+            &:last-child {
+                padding: 20px;
+            }
+        }
+    }
+    button {
+        margin: 5px 0;
+        width: 260px;
+    }
+}
+
 button {
     background-color: $actioncolour;
     background-image: url('../img/action-arrow.png');
@@ -480,8 +512,7 @@ button {
     border-right: 20px solid $actioncolour;
     box-sizing: border-box;
     color: #fff;
-    font-family: 'museo', sans-serif;
-    font-weight: 300;
+    @include museo;
     padding: 10px 20px;;
     text-align: left;
     width: 245px;
