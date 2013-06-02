@@ -14,6 +14,12 @@ $margin: 1.2em;
 $actioncolour: #835c67;
 $primarycolour: #86a35e;
 
+@mixin museo {
+    font-family: 'Museo', sans-serif;
+    font-weight: 300;
+}
+
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -442,6 +448,26 @@ section {
         img {
             width: 220px;
         }
+    }
+}
+
+#testimonial {
+    background-color: $primarycolour;
+    box-sizing: border-box;
+    height: 130px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    p {
+        @include museo;
+        font-size: 29px;
+        margin: 0 200px 0 0;
+    }
+    img {
+        position: absolute;
+        right: 30px;
+        top: -25px;
+        border: 1px solid $primarycolour;
     }
 }
 
