@@ -377,6 +377,7 @@ header {
         float: right;
         font-size: 24px;
         margin: $margin 2*$margin;
+        @include museo;
     }
 }
 
