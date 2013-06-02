@@ -14,6 +14,7 @@ $margin: 40px;
 $actioncolour: #8b4b86;
 $primarycolour: #86a35e;
 $secondarycolour: #605549;
+$strongcolour: #5b7a30;
 
 @mixin museo {
     font-family: 'Museo', sans-serif;
@@ -537,6 +538,23 @@ section {
         height: 400px;
         float: left;
         margin-right: 50px;
+    }
+    h2 {
+        color: $actioncolour;
+    }
+}
+
+footer {
+    background-color: $strongcolour;
+    overflow: auto;
+    section {
+        box-sizing: border-box;
+        width: 50%;
+        float: left;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 }
 
