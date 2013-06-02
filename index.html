@@ -139,7 +139,7 @@
 
         <section id="user-testimonial">
             <blockquote>
-                <p>Before I joined the Severn Project I was in a mess. I had no job, my family barely spoke to me and I was severely depressed.</p>
+                <p>“Before I joined the Severn Project I was in a mess. I had no job, my family barely spoke to me and I was severely depressed.</p>
 
                 <p>Since joining, all of these have been reversed. I see my family regularly and I keep busy working for the project 3 days a week.</p>
 
@@ -149,8 +149,23 @@
             </blockquote>
         </section>
 
-        <section>
+        <section id="locations">
+            <button class="continue" type="button">See the locations</button>
             <h1>Bristol Born &amp; Bred</h1>
+
+            <div id="google-map"></div>
+
+            <div id="details">
+                <p>Metus, sit amet semper enim dictum non. Donec justo magna, viverra eu placerat eu, condimentum eget mi. Phasellus convallis ullamcorper nisl id interdum. Curabitur rhoncus ornare augue, vitae posuere justo facilisis quis. Praesent lobortis commodo tellus.</p>
+
+                <h2><strong>Whitchurch</strong> - garden, farm shop &amp; cafe</h2>
+                <p>Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. </p>
+
+                <h2><strong>Temple Meads</strong> - central growing hub</h2>
+                <p>Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. </p>
+
+                <h2><strong>Keynsham</strong> - organic market garden</h2>
+                <p>Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. </p>
         </section>
 
         <footer>
@@ -168,6 +183,42 @@
         <script src="js/lightbox.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpZbAKhdxwuw-DWNS_t894YOFTnnk3dVo&sensor=false">
+        </script>
+        <script type="text/javascript">
+            google.maps.visualRefresh = true;
+            var temple = new google.maps.LatLng(51.44589,-2.578761);
+            var keynsham = new google.maps.LatLng(51.425703,-2.509333);
+            var whitchurch = new google.maps.LatLng(51.414831,-2.569618);
+
+          function initialize() {
+            var mapOptions = {
+              center: new google.maps.LatLng(51.43, -2.55),
+              zoom: 12,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("google-map"),
+                mapOptions);
+
+            var marker1 = new google.maps.Marker({
+                map:map,
+                animation:google.maps.Animation.DROP,
+                position:temple
+            });
+            var marker2 = new google.maps.Marker({
+                map:map,
+                animation:google.maps.Animation.DROP,
+                position:keynsham
+            });
+            var marker3 = new google.maps.Marker({
+                map:map,
+                animation:google.maps.Animation.DROP,
+                position:whitchurch
+            });
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

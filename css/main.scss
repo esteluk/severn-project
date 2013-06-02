@@ -397,6 +397,9 @@ section {
     &.first {
         padding: 136px 2*$margin $margin;
     }
+    & > h1 {
+        margin-top: 0;
+    }
 }
 
 #video {
@@ -527,6 +530,16 @@ section {
     }
 }
 
+#locations {
+    background-color: #fff;
+    #google-map {
+        width: 450px;
+        height: 400px;
+        float: left;
+        margin-right: 50px;
+    }
+}
+
 button {
     background-color: $actioncolour;
     background-image: url('../img/action-arrow.png');
@@ -540,4 +553,7 @@ button {
     padding: 10px 20px;;
     text-align: left;
     width: 245px;
+    &.continue {
+        float: right;
+    }
 }
