@@ -128,20 +128,6 @@ if ($_POST) {
             <h1>This is the page title</h1>
         </section>
 
-        <section id="carousel">
-        </section>
-
-        <section id="leader">
-            <h1>The freshest, most local salad in Bristol</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis molestie metus, sit amet semper enim dictum non. Donec justo magna, viverra eu placerat eu, condimentum eget mi.</p>
-        </section>
-
-        <aside>
-            <h1>Useful links</h1>
-            <button type="button">Key link 1</button>
-            <button type="button">Key link 2</button>
-            <button type="button">Key link 3</button>
-        </aside>
 
         <div id="one-column">
 

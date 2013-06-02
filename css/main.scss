@@ -670,7 +670,11 @@ aside {
         width: 100%;
     }
     form {
-        text-align: center;
+        // text-align: center;
+    }
+
+    .donation-form {
+        display: block;
     }
 }
 
