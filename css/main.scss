@@ -431,7 +431,7 @@ section {
 #video {
     background-image: url('../img/salad.jpg');
     background-size: cover;
-    min-height: 600px;
+    min-height: 100px;
     padding-left: 0; padding-right: 0;
 
     h1 {
@@ -440,10 +440,11 @@ section {
         margin-top: 0;
         padding: 20px 3*$margin;
         width: 100%;
+        display: none;
     }
 
     #video-play {
-        display: block;
+        display: none;
         height: 115px; width: 115px;
         margin: 160px auto 0;
 
@@ -655,6 +656,15 @@ aside {
     width: 75%;
     box-sizing: border-box;
     padding: 10px 2*$margin;
+    img {
+        width: 100%;
+    }
+}
+
+#one-column {
+    width: 75%;
+    margin: 0 auto;
+
     img {
         width: 100%;
     }
