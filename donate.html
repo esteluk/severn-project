@@ -46,23 +46,41 @@
         </header>
 
         <section class="banner first">
-            <h1>This is the page title</h1>
-        </section>
-
-        <section id="carousel">
-        </section>
-
-        <section id="leader">
-            <h1>Support the Severn Project</h1>
-            <p>We'd really like to support our goals by being awesome.</p>
+            <h1>Donate</h1>
         </section>
 
         <div id="one-column">
-            <p>Phasellus convallis ullamcorper nisl id interdum. Curabitur rhoncus ornare augue, vitae posuere justo facilisis quis. Praesent lobortis commodo tellus, eget posuere eros condimentum ut. Fusce congue ligula ac nibh malesuada rhoncus.</p>
+            <p>Please help us by donating and helping to support the <em>Severn Project</em> as it expands over the
+                next five years. These funds will help us build a Farm Shop and related facilities at our Whitchurch
+                location.</p>
 
-            <p>Praesent malesuada augue sit amet nibh interdum sed porttitor quam accumsan. Duis justo eros, sagittis eget auctor ac, lobortis non massa. Aenean metus leo, convallis a consequat ut, imperdiet eget erat.</p>
+            <form action="." method="post">
+                <script src="https://checkout.stripe.com/v2/checkout.js"></script>
+                <button id="stripeButton">Donate £20</button>
 
-            <img src="img/salad.jpg">
+                <script>
+                    $('#stripeButton').click(function(){
+                        event.preventDefault();
+                      var token = function(res){
+                        var $input = $('<input type=hidden name=stripeToken />').val(res.id);
+                        $('form').append($input).submit();
+                      };
+
+                      StripeCheckout.open({
+                        key:         'pk_test_SZesRHOJtwkRRMdZnwSEd2KJ',
+                        address:     true,
+                        amount:      2000,
+                        currency:    'gbp',
+                        name:        'Joes Pistachios',
+                        description: 'A bag of Pistachios',
+                        panelLabel:  'Checkout',
+                        token:       token
+                      });
+
+                      return false;
+                    });
+                </script>
+            </form>
         </div>
 
         <section id="contact">
