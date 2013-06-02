@@ -477,8 +477,9 @@ section {
 #testimonial {
     background-color: $primarycolour;
     box-sizing: border-box;
-    height: 130px;
+    // height: 130px;
     overflow: visible;
+    padding: 30px 80px;
     position: relative;
     z-index: 2;
     p {
