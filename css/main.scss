@@ -517,6 +517,7 @@ section {
         background-color: #fff;
         overflow: auto;
         padding-left: 2*$margin;
+        padding-right: 20px;
         box-sizing: border-box;
         div {
             box-sizing: border-box;
@@ -614,6 +615,7 @@ footer {
     .twitter-timeline {
         float: right;
         margin-top: -20px;
+        margin-right: 2*$margin;
     }
 }
 
