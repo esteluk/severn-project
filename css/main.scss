@@ -318,35 +318,75 @@ body {
 
 header {
     width: 100%;
-    background-color: #333;
+    height: 136px;
+    background-color: rgba(255, 255, 255, 0.7);
     border-bottom: 5px solid #111;
-    height: 65px;
     overflow: auto;
     position: fixed;
+    z-index: 10;
 
     ul#menu {
-        color: #fff;
+        color: #222;
         float: right;
         margin: $margin 2*$margin 0 0;
         li {
             display: inline-block;
-            padding: 0 $margin;
+            padding-left: 2*$margin;
         }
+    }
+
+    .tel {
+        clear: right;
+        float: right;
+        font-size: 24px;
+        margin: $margin 2*$margin;
     }
 }
 
 h1 {
     font-family: 'Museo', serif;
+    font-size: 40px;
     font-weight: 300;
 }
 
 section {
     overflow: auto;
     padding: $margin 2*$margin;
+    position: relative;
+
+    * {
+        z-index: 1;
+    }
+
+    .section-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 0;
+    }
+
+    &.first {
+        padding: 136px 2*$margin $margin;
+    }
+}
+
+#video {
+    background-image: url('../img/salad.jpg');
+    background-size: cover;
+    min-height: 600px;
+    padding-left: 0; padding-right: 0;
+
+    h1 {
+        background-color: #86a35e;
+        box-sizing: border-box;
+        margin-top: 0;
+        padding: 20px 3*$margin;
+        width: 100%;
+    }
 }
 
 #product {
     background-color: #149ACC;
-    padding: 70px 2*$margin $margin;
     min-height: 600px;
 }
