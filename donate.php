@@ -74,22 +74,76 @@ if ($_POST) {
 
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="en-us" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>    <html lang="en-us" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>    <html lang="en-us" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-		<title>Stripe Donation Form</title>
-		<link rel="stylesheet" type="text/css" href="style.css" media="all">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>The Severn Project - Sowing the Seeds of Hope</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <script type="text/javascript" src="//use.typekit.net/nwt7ivy.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
 			Stripe.setPublishableKey('<?php echo $config['publishable-key'] ?>');
 		</script>
-		<script type="text/javascript" src="script.js"></script>
-	</head>
-	<body>
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="css/lightbox.css" rel="stylesheet" />
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header>
+            <a href="index.html">
+                <hgroup>
+                    <img src="img/logo.png" id="logo">
+                </hgroup>
+            </a>
+
+            <ul id="menu">
+                <li class="active">Our Product</li>
+                <li>What We Do</li>
+                <li>Our Impact</li>
+                <li>About Us</li>
+                <li>Get Involved</li>
+            </ul>
+
+            <span class="tel">Tel. 01179 353780</span>
+        </header>
+
+        <section class="banner first">
+            <h1>This is the page title</h1>
+        </section>
+
+        <section id="carousel">
+        </section>
+
+        <section id="leader">
+            <h1>The freshest, most local salad in Bristol</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis molestie metus, sit amet semper enim dictum non. Donec justo magna, viverra eu placerat eu, condimentum eget mi.</p>
+        </section>
+
+        <aside>
+            <h1>Useful links</h1>
+            <button type="button">Key link 1</button>
+            <button type="button">Key link 2</button>
+            <button type="button">Key link 3</button>
+        </aside>
+
+        <div id="one-column">
 
 		<div class="wrapper">
 
@@ -261,6 +315,41 @@ if ($_POST) {
       <script>if (window.Stripe) $(".donation-form").show()</script>
       <noscript><p>JavaScript is required for the donation form.</p></noscript>
 		</div>
+		</div>
 
-	</body>
+        <section id="contact">
+            <h1>Connect with us
+            <div class="social">
+                <a href="//www.facebook.com/pages/The-Severn-Project-Bristol/114453121919479?fref=ts"><img src="img/facebook.png"></a>
+                <a href="//twitter.com/severnproject"><img src="img/twitter.png"></a>
+            </div>
+            </h1>
+        </section>
+
+        <footer>
+            <h1><img src="img/tel-icon.png">01179 353780 / 07960 290943</h1>
+
+            <div>
+                <a class="twitter-timeline" height="300" href="https://twitter.com/severnproject" data-widget-id="341164564949385216">Tweets by @severnproject</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+            </div>
+
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="js/lightbox.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
 </html>
