@@ -13,6 +13,7 @@ $margin: 40px;
 
 $actioncolour: #8b4b86;
 $primarycolour: #86a35e;
+$secondarycolour: #605549;
 
 @mixin museo {
     font-family: 'Museo', sans-serif;
@@ -500,6 +501,29 @@ section {
     button {
         margin: 5px 0;
         width: 260px;
+    }
+}
+
+#user-testimonial {
+    background-color: $secondarycolour;
+    background-image: url('../img/dandelion.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    color: #fff;
+    blockquote {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+
+        @include museo;
+        font-size: 25px;
+        p {
+            font-style: italic;
+            margin-top: 0;
+        }
+        span {
+            font-weight: 500;
+        }
     }
 }
 
