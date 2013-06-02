@@ -36,7 +36,7 @@ if ($_POST) {
 			'card' => $token,
 			'description' => 'Donation by ' . $name . ' (' . $email . ')',
 			'amount' => $amount * 100,
-			'currency' => 'usd')
+			'currency' => 'gbp')
 		);
 
 		// Build and send the email
@@ -140,12 +140,6 @@ if ($_POST) {
 			<p>
 				<strong>This form has been pre-populated with test Credit Card data. No
 				live transactions are taking place.</strong>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 
 			<div class="messages">
@@ -248,12 +242,12 @@ if ($_POST) {
 						Your Generous Donation
 					</legend>
 					<div class="form-row form-amount">
-						<label><input type="radio" name="amount" class="set-amount" value="25"> $25</label>
-						<label><input type="radio" name="amount" class="set-amount" value="500"> $500</label>
-						<label><input type="radio" name="amount" class="set-amount" value="2500"> $2,500</label>
-						<label><input type="radio" name="amount" class="set-amount" value="100"> $100</label>
-						<label><input type="radio" name="amount" class="set-amount" value="1000"> $1,000</label>
-						<label><input type="radio" name="amount" class="set-amount" value="5000"> $5,000</label>
+						<label><input type="radio" name="amount" class="set-amount" value="25"> £25</label>
+						<label><input type="radio" name="amount" class="set-amount" value="500"> £500</label>
+						<label><input type="radio" name="amount" class="set-amount" value="2500"> £2,500</label>
+						<label><input type="radio" name="amount" class="set-amount" value="100"> £100</label>
+						<label><input type="radio" name="amount" class="set-amount" value="1000"> £1,000</label>
+						<label><input type="radio" name="amount" class="set-amount" value="5000"> £5,000</label>
 						<label><input type="radio" name="amount" class="other-amount" value="0"> Other:</label> <input type="text" class="amount text" disabled>
 					</div>
 					<div class="form-row form-number">
