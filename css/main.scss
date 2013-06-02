@@ -601,12 +601,26 @@ footer {
     }
 }
 
+#carousel {
+    display: none;
+}
+
 aside {
     width: 25%;
     float: right;
 
     button {
         margin: 5px 0;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
+#intro {
+    p {
+        font-size: 20px;
+        @include museo;
     }
 }
 
